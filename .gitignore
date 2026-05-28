@@ -1,0 +1,14 @@
+# Credenciais do banco de dados
+back/conexao.php
+
+# Imagens enviadas pelos usuários
+uploads/*
+!uploads/.gitkeep
+
+# Configurações do editor
+.claude/
+.vscode/
+
+# Arquivos temporários
+*.tmp
+*.log
