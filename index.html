@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo do Pescador</title>
+    <link rel="icon" href="imagens/logo.png" type="image/png">
+    <link rel="stylesheet" href="front/style.css?v=2">
+</head>
+<body>
+<script>if (localStorage.getItem("darkMode") === "true") document.body.classList.add("dark");</script>
+
+    <header>
+        <button id="btnDarkMode" title="Alternar modo escuro">🌙</button>
+        <div class="header-logo">
+            <img src="imagens/logoT.png" alt="Logo" id="logoHeader">
+            <span id="tituloHeader">Catálogo do Pescador</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="controles">
+            <button onclick="window.location.href = 'front/cadastrar.html'" class="botaoCadastrar">
+                + Cadastrar Novo
+            </button>
+            <input type="text" id="campoFiltro" placeholder="Filtrar por nome...">
+        </div>
+
+        <section id="slogan">
+            <div id="textoSlogan">
+                <h1>Tudo sobre pesca em um só lugar</h1>
+                <p>Descubra tudo sobre os peixes, iscas, tamanhos e demais informações</p>
+                <button id="btnExplorar" onclick="document.getElementById('ContainerPrincipal').scrollIntoView({ behavior: 'smooth' })">
+                    Explorar ↓
+                </button>
+            </div>
+        </section>
+
+        <div id="ContainerPrincipal">
+            <section id="secaoCards">
+                <h3 id="tituloPeixes">Peixes</h3>
+                <div id="containerCards"></div>    
+            </section>
+
+
+
+
+        <aside>
+            <!-- Card: Cadastrar Novo -->
+            <div class="cardAside card-adicionar" onclick="window.location.href = 'front/cadastrar.html'">
+                <span class="card-adicionar-icone">+</span>
+                <span class="card-adicionar-texto">Cadastrar novo peixe</span>
+            </div>
+
+            <!-- Card: Buscar Peixe -->
+            <div class="cardAside" id="cardBuscar">
+                <h4 class="tituloCardAside">🔍 Buscar peixes</h4>
+                <input 
+                    type="text" 
+                    id="campoBuscarAside" 
+                    placeholder="Digite o nome do peixe..."
+                >
+            </div>
+
+            <!-- Card: Dica do Dia -->
+            <div class="cardAside" id="cardDica">
+                <h4 class="tituloCardAside">💡 Dica do dia</h4>
+                <p class="textoDica">
+                    Prefira pescar nas primeiras horas da manhã ou no final da tarde. Os peixes estão mais ativos!
+                </p>
+            </div>
+
+            <!-- Card: Curiosidade do Dia -->
+            <div class="cardAside" id="cardCuriosidade">
+                <h4 class="tituloCardAside">🐟 Curiosidade do dia</h4>
+                <p class="textoDica" id="textoCuriosidade"></p>
+            </div>
+
+            <!-- Card: Peixe Aleatório -->
+            <div class="cardAside" id="cardAleatorio">
+                <h4 class="tituloCardAside">🎲 Peixe aleatório</h4>
+                <div id="resultadoAleatorio"></div>
+                <button id="btnSortear">Sortear</button>
+            </div>
+        </aside>
+        </div>
+
+
+        
+    </main>
+    
+    <!-- Modal -->
+    <div id="modalOverlay">
+        <div id="modalCard">
+            <button id="modalFechar">&times;</button>
+            <img id="modalImagem" src="" alt="">
+            <div id="modalInfo">
+                <h2 id="modalNome"></h2>
+                <span id="modalCategoria"></span>
+                <p id="modalDescricao"></p>
+                <div id="modalDetalhes">
+                    <span id="modalTamanho"></span>
+                    <span id="modalPeso"></span>
+                    <span id="modalIsca"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js?v=2"></script>
+</body>
+</html>
