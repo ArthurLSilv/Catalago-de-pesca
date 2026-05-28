@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Peixe — Catálogo do Pescador</title>
+    <link rel="icon" href="../imagens/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<script>if (localStorage.getItem("darkMode") === "true") document.body.classList.add("dark");</script>
+
+    <header>
+        <div class="controles-form">
+            <button onclick="window.location.href = '../index.html'" class="botaoCadastrar">← Voltar</button>
+            <span class="header-titulo">Atualizar Peixe</span>
+            <button id="btnDarkMode" title="Alternar modo escuro">🌙</button>
+        </div>
+    </header>
+
+    <main class="main-form">
+        <div class="form-container">
+            <form id="formAtualizar" action="../back/atualizar.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" id="idAtualizar">
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Nome</label>
+                        <input type="text" name="nome" id="nomeAtualizar" placeholder="Ex: Tucunaré" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Categoria</label>
+                        <input type="text" name="categoria" id="categoriaAtualizar" placeholder="Ex: Água doce" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Tamanho Médio</label>
+                        <input type="text" name="tamanho" id="tamanhoAtualizar" placeholder="Ex: Até 80 cm" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Peso Médio</label>
+                        <input type="text" name="peso" id="pesoAtualizar" placeholder="Ex: Até 12 kg" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Isca</label>
+                        <input type="text" name="isca" id="iscaAtualizar" placeholder="Ex: Artificial" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Imagem (deixe vazio para manter a atual)</label>
+                        <input type="file" name="imagem" id="imagemAtualizar" accept="image/*">
+                    </div>
+                </div>
+
+                <input type="hidden" name="imagemAtual" id="imagemAtualInput">
+
+                <div class="input-group">
+                    <label>Descrição</label>
+                    <textarea name="descricao" id="descricaoAtualizar" placeholder="Descreva o peixe..." maxlength="300" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Salvar Alterações</button>
+                    <button type="button" class="btn-secondary" onclick="window.location.href = '../index.html'">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="atualizar.js?v=2"></script>
+</body>
+</html>
