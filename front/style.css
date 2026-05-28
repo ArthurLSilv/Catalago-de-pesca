@@ -1,0 +1,944 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: whitesmoke;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 36px 40px 36px;
+    margin-bottom: 32px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#logoHeader {
+    height: 110px;
+    width: auto;
+}
+
+#tituloHeader {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(42, 42, 126);
+    letter-spacing: 1px;
+}
+
+.controles {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+}
+.botaoCadastrar {
+    background-color: rgb(42, 42, 126);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botaoCadastrar:hover {
+    background-color: rgb(30, 30, 100);
+}
+
+#campoFiltro {
+    border: 1px solid grey;
+    padding: 8px 16px;
+    padding-right: 120px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+}
+
+#campoFiltro::placeholder {
+    color: #999;
+}
+
+#campoFiltro:focus {
+    outline: none;
+    border-color: rgb(42, 42, 126);
+}   
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+#slogan{
+    margin-top: 20px;
+    border: 1px solid grey;
+    width: 80%;
+    height: 350px;
+    background-image: url(https://www.ipaam.am.gov.br/wp-content/uploads/2018/02/pescaria.jpg);
+    background-size: cover;
+    border-radius: 12px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+#textoSlogan {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px 24px;
+    margin-right: 32px;
+}
+
+#textoSlogan h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.3;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);
+}
+
+#textoSlogan p {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+#btnExplorar {
+    margin-top: 6px;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(42, 42, 126);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#btnExplorar:hover {
+    background-color: #e8e8f0;
+    transform: translateY(2px);
+}
+#tituloPeixes{
+    color: rgb(42, 42, 126);
+}
+
+#ContainerPrincipal {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+    min-height: 350px;
+}
+
+#secaoCards {
+    border: none;
+    width: 75%;
+    height: auto;
+    padding: 16px;
+}
+
+aside {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 0 12px 12px 0;
+}
+
+.cardAside {
+    background-color: #16213e;
+    border-radius: 10px;
+    padding: 14px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tituloCardAside {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#campoBuscarAside {
+    border: 1px solid #444;
+    background-color: #0f3460;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    width: 100%;
+}
+
+#campoBuscarAside::placeholder {
+    color: #aaa;
+}
+
+.textoDica {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.5;
+    border-left: 3px solid #2a7ae4;
+    padding-left: 8px;
+}
+
+#btnSortear {
+    background-color: #2a7ae4;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 4px;
+}
+
+#btnSortear:hover {
+    background-color: #1a5fb4;
+}
+
+.sorteio-img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.sorteio-nome {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.sorteio-categoria {
+    font-size: 12px;
+    color: #2a7ae4;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.sorteio-detalhe {
+    font-size: 12px;
+    color: #ccc;
+}
+
+#containerCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 16px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-adicionar {
+    border: 2px dashed #2a7ae4 !important;
+    background-color: #16213e !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card-adicionar:hover {
+    background-color: #1a2a50 !important;
+}
+
+.card-adicionar-icone {
+    font-size: 36px;
+    color: #2a7ae4;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.card-adicionar-texto {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2a7ae4;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.card-nome {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.card-categoria {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2a7ae4;
+}
+
+.card-descricao {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    word-break: break-word;
+}
+
+.card-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.link-ver-mais {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(42, 42, 126);
+    cursor: pointer;
+    padding: 6px 0 4px;
+    margin-top: auto;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.link-ver-mais:hover {
+    color: #2a7ae4;
+    text-decoration: underline;
+}
+
+.btn-acoes {
+    display: flex;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalOverlay.ativo {
+    display: flex;
+}
+
+#modalCard {
+    background-color: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalFechar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    background: none;
+    z-index: 1;
+    line-height: 1;
+}
+
+#modalFechar:hover {
+    color: #000;
+}
+
+#modalImagem {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+#modalInfo {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#modalNome {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+#modalCategoria {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2a7ae4;
+}
+
+#modalDescricao {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+#modalDetalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: #444;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.btn-atualizar {
+    flex: 1;
+    padding: 8px;
+    background-color: rgb(42, 42, 126);
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-deletar {
+    flex: 1;
+    padding: 8px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ── Páginas de formulário ── */
+
+.controles-form {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 80%;
+    justify-items: start;
+}
+
+.controles-form .header-titulo {
+    justify-self: center;
+}
+
+.header-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(42, 42, 126);
+    text-align: center;
+}
+
+.main-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    min-height: calc(100vh - 75px);
+    background-color: whitesmoke;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="file"],
+.input-group textarea {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: rgb(42, 42, 126);
+    background-color: white;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.input-group input[type="file"] {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-primary {
+    flex: 1;
+    padding: 12px;
+    background-color: rgb(42, 42, 126);
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(30, 30, 100);
+}
+
+.btn-secondary {
+    flex: 1;
+    padding: 12px;
+    background-color: white;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* ── Botão Dark Mode ── */
+#btnDarkMode {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+#btnDarkMode:hover {
+    background-color: rgba(0,0,0,0.07);
+}
+
+.controles-form #btnDarkMode {
+    position: static;
+    justify-self: end;
+}
+
+header {
+    position: relative;
+}
+
+/* ── Dark Mode ── */
+body.dark {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark header {
+    background-color: #1e293b;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark #logoHeader {
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+}
+
+body.dark #tituloHeader {
+    color: #93c5fd;
+}
+
+body.dark #btnDarkMode:hover {
+    background-color: rgba(255,255,255,0.08);
+}
+
+body.dark .botaoCadastrar {
+    background-color: #2a7ae4;
+}
+
+body.dark #campoFiltro {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark #campoFiltro::placeholder {
+    color: #64748b;
+}
+
+body.dark #slogan {
+    border-color: #334155;
+}
+
+body.dark #tituloPeixes {
+    color: #93c5fd;
+}
+
+body.dark #ContainerPrincipal {
+    border-color: #334155;
+}
+
+body.dark #secaoCards {
+    border-color: #334155;
+}
+
+body.dark .card {
+    background-color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark .card-nome {
+    color: #f1f5f9;
+}
+
+body.dark .card-descricao {
+    color: #94a3b8;
+}
+
+body.dark .card-detalhes {
+    color: #94a3b8;
+}
+
+body.dark .link-ver-mais {
+    color: #93c5fd;
+}
+
+body.dark #modalCard {
+    background-color: #1e293b;
+}
+
+body.dark #modalNome {
+    color: #f1f5f9;
+}
+
+body.dark #modalDescricao {
+    color: #94a3b8;
+}
+
+body.dark #modalDetalhes {
+    color: #94a3b8;
+    border-top-color: #334155;
+}
+
+body.dark #modalFechar {
+    color: #94a3b8;
+}
+
+body.dark #modalFechar:hover {
+    color: #f1f5f9;
+}
+
+body.dark .main-form {
+    background-color: #0f172a;
+}
+
+body.dark .form-container {
+    background-color: #1e293b;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+body.dark .input-group label {
+    color: #94a3b8;
+}
+
+body.dark .input-group input[type="text"],
+body.dark .input-group input[type="email"],
+body.dark .input-group input[type="file"],
+body.dark .input-group textarea {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark .input-group input:focus,
+body.dark .input-group textarea:focus {
+    border-color: #2a7ae4;
+    background-color: #1e293b;
+}
+
+body.dark .btn-secondary {
+    background-color: #1e293b;
+    color: #94a3b8;
+    border-color: #334155;
+}
+
+body.dark .btn-secondary:hover {
+    background-color: #0f172a;
+}
+
+body.dark .header-titulo {
+    color: #93c5fd;
+}
+
+/* ── Responsivo: Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+    #ContainerPrincipal {
+        width: 95%;
+    }
+
+    #slogan {
+        width: 95%;
+    }
+
+    .controles {
+        width: 95%;
+    }
+
+    #containerCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #secaoCards {
+        width: 70%;
+    }
+
+    aside {
+        width: 30%;
+    }
+}
+
+/* ── Responsivo: Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+    header {
+        padding: 24px 20px;
+        margin-bottom: 16px;
+        gap: 12px;
+    }
+
+    #logoHeader {
+        height: 80px;
+    }
+
+    #tituloHeader {
+        font-size: 24px;
+    }
+
+    .controles {
+        width: 100%;
+        padding: 0 16px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botaoCadastrar {
+        width: 100%;
+        text-align: center;
+    }
+
+    #campoFiltro {
+        width: 100%;
+        padding-right: 16px;
+    }
+
+    #slogan {
+        width: 100%;
+        border-radius: 0;
+        height: 280px;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    #textoSlogan {
+        width: 90%;
+        margin-right: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    #textoSlogan h1 {
+        font-size: 20px;
+    }
+
+    #ContainerPrincipal {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #secaoCards {
+        width: 100%;
+        padding: 12px;
+    }
+
+    aside {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+        padding: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cardAside {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 140px;
+    }
+
+    #containerCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 24px 20px;
+    }
+
+    .controles-form {
+        width: 95%;
+    }
+
+    .main-form {
+        padding: 24px 12px;
+        align-items: flex-start;
+    }
+}
+
+/* ── Responsivo: Mobile pequeno (≤ 480px) ── */
+@media (max-width: 480px) {
+    #logoHeader {
+        height: 64px;
+    }
+
+    #tituloHeader {
+        font-size: 20px;
+    }
+
+    #containerCards {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    .cardAside {
+        flex: unset;
+        width: 100%;
+    }
+
+    #slogan {
+        height: 220px;
+    }
+
+    #textoSlogan h1 {
+        font-size: 18px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
