@@ -25,7 +25,7 @@ Sistema web de catálogo de peixes para pescadores. Permite cadastrar, visualiza
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/ArthurLSilv/Catalago-de-pesca.git
+git clone https://github.com/ArthurLSilv/Catalogo-de-pesca.git
 ```
 
 **2. Mova a pasta para o diretório do servidor**
